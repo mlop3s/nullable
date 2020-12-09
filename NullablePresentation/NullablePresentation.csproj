@@ -10,8 +10,7 @@
     <AssemblyName>NullablePresentation</AssemblyName>
 	<AnalysisMode>AllEnabledByDefault</AnalysisMode>
     <Strict>true</Strict>
-    <Nullable>enable</Nullable>
-    <NullableContextOptions>enable</NullableContextOptions>
+	<Nullable>enable</Nullable>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <LangVersion>8.0</LangVersion>
     <FileAlignment>512</FileAlignment>

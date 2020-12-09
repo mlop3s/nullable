@@ -31,7 +31,7 @@ namespace NullablePresentation
 
         private static void PrintPrescription(Prescription prescription)
         {
-            if (prescription.Agent is null)
+            if (!Helpers.IsStringNullOrEmpty(prescription.Agent))
             {
                 Console.WriteLine(
                     $@"
@@ -47,7 +47,7 @@ Drug:            {prescription.Drug} [{prescription.Drug.Length}]
 Prescription Id: {prescription.Id} 
 Posology:        {prescription.Posology} [{prescription.Posology.Length}]
 Drug:            {prescription.Drug} [{prescription.Drug.Length}]
-Agent:           {prescription.Agent} [{prescription.Agent?.Length}]
+Agent:           {prescription.Agent} [{prescription.Agent.Length}]
 "
     );
             }
