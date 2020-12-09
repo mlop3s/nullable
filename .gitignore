@@ -319,3 +319,4 @@ __pycache__/
 *.mh
 **/*_h.h
 *.7z
+/NullablePresentation/NullablePresentation.GeneratedMSBuildEditorConfig.editorconfig

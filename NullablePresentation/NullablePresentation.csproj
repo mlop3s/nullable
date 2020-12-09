@@ -8,10 +8,12 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>NullablePresentation</RootNamespace>
     <AssemblyName>NullablePresentation</AssemblyName>
+	<AnalysisMode>AllEnabledByDefault</AnalysisMode>
     <Strict>true</Strict>
     <Nullable>enable</Nullable>
+    <NullableContextOptions>enable</NullableContextOptions>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <LangVersion>LatestMajor</LangVersion>
+    <LangVersion>8.0</LangVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -54,6 +56,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers">
+      <Version>5.0.1</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Nullable">
       <Version>1.3.0</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
