@@ -20,7 +20,15 @@ namespace NullablePresentation
     {
         static void Main(string[] args)
         {
-
+            var prescription = new Prescription();
+            Console.WriteLine(
+$@"
+Prescription Id: {prescription.Id}
+Posology:        {prescription.Posology}
+Drug:            {prescription.Drug}
+Agent:           {prescription.Agent}
+"
+);
         }
     }
 }
