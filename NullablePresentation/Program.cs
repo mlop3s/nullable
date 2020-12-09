@@ -8,25 +8,36 @@ using System.Threading.Tasks;
 
 namespace NullablePresentation
 {
-    public class Prescription
+    public sealed class Prescription
     {
-        public long Id { get; set; }
-        public string Posology { get; set; }
-        public string Drug { get; set; }
-        public string Agent { get; set; } 
+        public long Id { get; }
+        public string Posology { get; }
+        public string Drug { get; }
+        public string Agent { get;  }
+
+        public Prescription(long id, string posology, string drug, string agent)
+            => (Id, Posology, Drug, Agent) = (id, posology, drug, agent);
     }
 
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            var prescription = new Prescription();
+            var aspirin = new Prescription(1, "1-0-1-0", "Aspirin", "Acetylsalicylsäure");
+            var ibuprofen = new Prescription(1, "0-1-1-0", "Ibuprofen", null);
+
+            PrintPrescription(aspirin);
+            PrintPrescription(ibuprofen);
+        }
+
+        private static void PrintPrescription(Prescription prescription)
+        {
             Console.WriteLine(
 $@"
-Prescription Id: {prescription.Id}
-Posology:        {prescription.Posology}
-Drug:            {prescription.Drug}
-Agent:           {prescription.Agent}
+Prescription Id: {prescription.Id} 
+Posology:        {prescription.Posology} [{prescription.Posology.Length}]
+Drug:            {prescription.Drug} [{prescription.Drug.Length}]
+Agent:           {prescription.Agent} [{prescription.Agent.Length}]
 "
 );
         }
