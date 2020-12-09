@@ -8,10 +8,10 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>NullablePresentation</RootNamespace>
     <AssemblyName>NullablePresentation</AssemblyName>
-	<Strict>true</Strict>
-	<Nullable>enable</Nullable>
+    <Strict>true</Strict>
+    <Nullable>enable</Nullable>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-	<LangVersion>LatetMajor</LangVersion>
+    <LangVersion>LatetMajor</LangVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
