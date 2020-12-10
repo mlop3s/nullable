@@ -31,6 +31,7 @@ namespace NullablePresentation
 
         private static void PrintPrescription(Prescription prescription)
         {
+
             if (Helpers.IsStringNullOrEmpty(prescription.Agent))
             {
                 Console.WriteLine(

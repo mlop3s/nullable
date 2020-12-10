@@ -8,7 +8,6 @@ namespace NullablePresentation
     public static class Helpers
     {
         public static bool IsStringNullOrEmpty([NotNullWhen(false)]string? s) 
-        => string.IsNullOrEmpty(s);
-        
+          => string.IsNullOrEmpty(s);
     }
 }
