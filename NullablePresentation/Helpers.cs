@@ -7,9 +7,8 @@ namespace NullablePresentation
 {
     public static class Helpers
     {
-        public static bool IsStringNullOrEmpty([NotNullWhen(true)]string? s) // bug on attribute => false and true are exchanged
-        {
-            return string.IsNullOrEmpty(s);
-        }
+        public static bool IsStringNullOrEmpty([NotNullWhen(false)]string? s) 
+        => string.IsNullOrEmpty(s);
+        
     }
 }
