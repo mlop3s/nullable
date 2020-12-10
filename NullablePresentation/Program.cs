@@ -1,4 +1,4 @@
-﻿#nullable disable
+﻿#nullable enable
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,9 +12,9 @@ namespace NullablePresentation
         public long Id { get; }
         public string Posology { get; }
         public string Drug { get; }
-        public string Agent { get;  }
+        public string? Agent { get;  }
 
-        public Prescription(long id, string posology, string drug, string agent)
+        public Prescription(long id, string posology, string drug, string? agent)
             => (Id, Posology, Drug, Agent) = (id, posology, drug, agent);
     }
 
@@ -31,14 +31,26 @@ namespace NullablePresentation
 
         private static void PrintPrescription(Prescription prescription)
         {
-            Console.WriteLine(
-$@"
+            if (!Helpers.IsStringNullOrEmpty(prescription.Agent))
+            {
+                Console.WriteLine(
+                    $@"
+Prescription Id: {prescription.Id} 
+Posology:        {prescription.Posology} [{prescription.Posology.Length}]
+Drug:            {prescription.Drug} [{prescription.Drug.Length}]
+");
+            }
+            else
+            {
+                Console.WriteLine(
+    $@"
 Prescription Id: {prescription.Id} 
 Posology:        {prescription.Posology} [{prescription.Posology.Length}]
 Drug:            {prescription.Drug} [{prescription.Drug.Length}]
 Agent:           {prescription.Agent} [{prescription.Agent.Length}]
 "
-);
+    );
+            }
         }
     }
 }
